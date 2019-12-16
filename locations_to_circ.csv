@@ -1,0 +1,5 @@
+location_code,circ_desk
+wrlc stru,SCRC_DESK
+wrlc stnc,DEFAULT_CIRC_DESK
+wrlc shrp,DEFAULT_CIRC_DESK
+wrlc stor,DEFAULT_CIRC_DESK

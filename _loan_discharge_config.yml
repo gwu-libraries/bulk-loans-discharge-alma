@@ -1,0 +1,5 @@
+apikey: ""
+loans_data_file: ./items_to_discharge.csv
+circ_desks_file: ./locations_to_circ.csv
+data_dir: ./data
+location_type: temp
