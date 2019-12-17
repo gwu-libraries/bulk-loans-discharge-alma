@@ -25,9 +25,9 @@ Tested on Python 3.7
 5. Run the Analytics report `items_to_discharge`. This report depends on the report from step 4 but contains the necessary system Id's for use with the Bibs API. Export this report as a CSV file.
 6. Edit the `locations_to_circ.csv` file (or create a new one) mapping each (permanent or temporary) item location to a circulation desk configured to discharge items from that location. **This is necessary to ensure that discharged items do not generate reshelving requests in Alma.**
 7. Edit the file `_loan_discharge_config.yml`:
-  - Update the location of the CSV files from steps 5 and 6 (if they are not located in the same directory as the scripts). 
-  - Paste your API key from step 1 into the `apikey` field.
-  - Make sure the value of the `location_type` key matches the kind of location associated with the items to be discharged. Possible values are `temp` and `perm`.
-  - Change the name of the file to `loan_discharge_config.yml` (removing the leading underscore).
+   - Update the location of the CSV files from steps 5 and 6 (if they are not located in the same directory as the scripts). 
+   - Paste your API key from step 1 into the `apikey` field.
+   - Make sure the value of the `location_type` key matches the kind of location associated with the items to be discharged. Possible values are `temp` and `perm`.
+   - Change the name of the file to `loan_discharge_config.yml` (removing the leading underscore).
 8. Create a subdirectory called `data` in the directory that houses the scripts. The JSON returned by the API will be saved to this directory. 
 9. Run the script `discharge_loans.py` from the command line: e.g., `python discharge_loans.py`
