@@ -10,9 +10,9 @@ In addition, JSON results from the API are stored to disk for use in troubleshoo
 
 ### Requirements ###
 
-pyyaml==5.1.1
-pandas==0.24.2
-aiohttp==3.5.4
+ - pyyaml==5.1.1
+ - pandas==0.24.2
+ - aiohttp==3.5.4
 
 Tested on Python 3.7
 
