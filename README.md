@@ -8,7 +8,7 @@ The script uses asynchronous methods to optimize API calls; up to 25 items can b
 
 In addition, JSON results from the API are stored to disk for use in troubleshooting items with errors. Results are returned in batches of 1000 items.
 
-###Requirements###
+### Requirements ###
 
 pyyaml==5.1.1
 pandas==0.24.2
@@ -16,7 +16,7 @@ aiohttp==3.5.4
 
 Tested on Python 3.7
 
-###Setup###
+### Setup ###
 
 1. Configure an API key for the Alma Bibs API with read/write access.
 2. Download or clone the contents of this repo.
