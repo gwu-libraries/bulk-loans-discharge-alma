@@ -6,7 +6,7 @@ An additional CSV is required to map each location code (temporary or permanent)
 
 The script uses asynchronous methods to optimize API calls; up to 25 items can be scanned in per second. A column called "done" is added to the CSV data source in order to indicate those rows that have successfully been scanned in. 
 
-In addition, JSON results from the API are stored to disk for use in troubleshooting items with errors. Results are returned in batches of 1000 items.
+In addition, JSON results from the API are stored to disk for use in troubleshooting items with errors. Results are returned in batches of 1000 items. When running from the command line, the script will output a snippet of the results returned from each batch. This is useful for monitoring for API errors during execution.
 
 ### Requirements ###
 
