@@ -90,6 +90,14 @@ def extract_ids(response):
 	except Exception as e:
 		return None
 
+def test_on_shelf(item_response):
+	'''Given a response object from the Scan-In API, verify that the item\'s base stauts is "In place."'''
+	try:
+		assert item_response['item_data']['base_status']['desc'] == 'Item in place'
+		return extract_ids(item_response)
+	except AssertionError:
+		return False
+
 def compute_remainder(results, data, test_fn):
 	'''Given a partial list of results, identify those on the original dataset as completed.
 	results should be a list of results from the run_batch function.
@@ -147,7 +155,7 @@ def discharge_loans():
 	results = do_scan_in(rows, config)
 	print("Scan-in complete. Marking data set for successful discharges...")
 	# Merge completed results with original data set
-	data = compute_remainder(results=results, data=data, test_fn=extract_ids)
+	data = compute_remainder(results=results, data=data, test_fn=test_on_shelf)
 	if data.empty:
 		return
 	# Rename the file for clarity, adding today's date
